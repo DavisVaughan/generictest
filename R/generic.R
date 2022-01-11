@@ -6,19 +6,59 @@
 #'
 #' @param new New
 #'
+#' @param old Old
+#'
 #' @export
-foo <- function(x, ..., new = NULL) {
-  UseMethod("foo")
+foo1 <- function(x, new = NULL, old = NULL, ...) {
+  # methodtest will re-export and extend this
+  UseMethod("foo1")
 }
 
-#' Bar
+#' Foo
 #'
 #' @param x Param
 #'
 #' @param ... Dots
 #'
 #' @param new New
+#'
+#' @param old Old
+#'
 #' @export
-bar <- function(x, ..., new = NULL) {
-  UseMethod("bar")
+foo2 <- function(x, new = NULL, old = NULL, ...) {
+  # methodtest will only extend this
+  UseMethod("foo2")
 }
+
+#' Foo
+#'
+#' @param x Param
+#'
+#' @param ... Dots
+#'
+#' @param new New
+#'
+#' @param old Old
+#'
+#' @export
+foo3 <- function(x, old = NULL, new = NULL, ...) {
+  # methodtest will re-export and extend this
+  UseMethod("foo3")
+}
+
+#' Foo
+#'
+#' @param x Param
+#'
+#' @param ... Dots
+#'
+#' @param new New
+#'
+#' @param old Old
+#'
+#' @export
+foo4 <- function(x, old = NULL, new = NULL, ...) {
+  # methodtest will only extend this
+  UseMethod("foo4")
+}
+
