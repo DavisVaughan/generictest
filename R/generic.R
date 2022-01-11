@@ -62,3 +62,19 @@ foo4 <- function(x, old = NULL, new = NULL, ...) {
   UseMethod("foo4")
 }
 
+
+#' Foo
+#'
+#' @param x Param
+#'
+#' @param ... Dots
+#'
+#' @param new New
+#'
+#' @param old Old
+#'
+#' @export
+foo5 <- function(x, ..., new = NULL, old = NULL) {
+  # methodtest will re-export and extend this
+  UseMethod("foo5")
+}
